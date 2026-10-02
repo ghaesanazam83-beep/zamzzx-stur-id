@@ -1,0 +1,2439 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+    name="theme-color"
+    content="#000000"
+>
+
+<title>Zamzzx Stur</title>
+
+<style>
+
+/* =========================================================
+   ZAMZZX STUR
+   BLACK / CYAN STORE
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    color: #ffffff;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(0,255,255,.08),
+            transparent 35%
+        ),
+        #000000;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+.container {
+    width: calc(100% - 28px);
+    max-width: 480px;
+    margin: auto;
+}
+
+
+/* =========================================================
+   WELCOME PAGE
+========================================================= */
+
+#welcomePage {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 22px 0;
+}
+
+.welcome-card {
+    width: 100%;
+
+    padding: 18px;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0b0b0b,
+            #030303
+        );
+
+    border:
+        1px solid rgba(0,255,255,.28);
+
+    box-shadow:
+        0 0 45px rgba(0,255,255,.06);
+}
+
+
+/* =========================================================
+   WELCOME VIDEO
+========================================================= */
+
+.welcome-video {
+    position: relative;
+
+    width: 100%;
+
+    /*
+       HORIZONTAL BANNER
+       16:7
+    */
+    aspect-ratio: 16 / 7;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: #050505;
+
+    border:
+        1px solid rgba(0,255,255,.45);
+}
+
+.welcome-video video {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.welcome-video::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.65),
+            transparent 70%
+        );
+}
+
+
+/* =========================================================
+   WELCOME TEXT
+========================================================= */
+
+.welcome-label {
+    margin-top: 20px;
+
+    text-align: center;
+
+    color: #00ffff;
+
+    font-size: 12px;
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.welcome-title {
+    margin-top: 8px;
+
+    text-align: center;
+
+    font-size: 23px;
+    font-weight: 1000;
+
+    line-height: 1.2;
+}
+
+.welcome-subtitle {
+    margin-top: 8px;
+
+    text-align: center;
+
+    color: #666;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.form {
+    margin-top: 22px;
+}
+
+.input-group {
+    margin-bottom: 11px;
+}
+
+.input-group input {
+    width: 100%;
+    height: 51px;
+
+    padding: 0 15px;
+
+    color: #ffffff;
+
+    background: #080808;
+
+    border:
+        1px solid #202020;
+
+    border-radius: 13px;
+
+    outline: none;
+
+    font-size: 13px;
+
+    transition: .2s;
+}
+
+.input-group input::placeholder {
+    color: #555;
+}
+
+.input-group input:focus {
+    border-color: #00ffff;
+
+    box-shadow:
+        0 0 0 3px rgba(0,255,255,.06);
+}
+
+
+/* =========================================================
+   ENTER BUTTON
+========================================================= */
+
+.enter-button {
+    width: 100%;
+    min-height: 53px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    color: #000000;
+
+    background:
+        linear-gradient(
+            135deg,
+            #00ffff,
+            #ffffff
+        );
+
+    font-size: 12px;
+    font-weight: 1000;
+
+    box-shadow:
+        0 0 25px rgba(0,255,255,.12);
+
+    transition: .2s;
+}
+
+.enter-button:active {
+    transform: scale(.98);
+}
+
+
+/* =========================================================
+   STORE
+========================================================= */
+
+#storePage {
+    min-height: 100vh;
+
+    padding-bottom: 40px;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    background:
+        rgba(0,0,0,.93);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom:
+        1px solid rgba(0,255,255,.12);
+}
+
+.nav-container {
+    width: calc(100% - 22px);
+
+    max-width: 720px;
+
+    margin: auto;
+
+    padding: 14px 0;
+}
+
+.logo {
+    text-align: center;
+
+    font-size: 24px;
+
+    font-weight: 1000;
+
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #00ffff;
+
+    text-shadow:
+        0 0 15px rgba(0,255,255,.3);
+}
+
+
+/* =========================================================
+   TABS
+========================================================= */
+
+.tabs {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 7px;
+
+    margin-top: 13px;
+}
+
+.tab {
+    min-height: 43px;
+
+    padding: 0 8px;
+
+    color: #666;
+
+    background: #080808;
+
+    border:
+        1px solid #202020;
+
+    border-radius: 11px;
+
+    font-size: 9px;
+    font-weight: 1000;
+
+    transition: .2s;
+}
+
+.tab.active {
+    color: #000000;
+
+    background:
+        linear-gradient(
+            135deg,
+            #00ffff,
+            #ffffff
+        );
+
+    border-color: #00ffff;
+}
+
+
+/* =========================================================
+   STORE CONTENT
+========================================================= */
+
+.store-container {
+    width: calc(100% - 22px);
+
+    max-width: 720px;
+
+    margin: auto;
+
+    padding-top: 17px;
+}
+
+
+/* =========================================================
+   HORIZONTAL VIDEO BANNER
+========================================================= */
+
+.video-banner {
+    position: relative;
+
+    width: 100%;
+
+    /*
+       INI YANG MEMBUAT VIDEO
+       MENJADI PERSEGI PANJANG
+    */
+    aspect-ratio: 16 / 7;
+
+    overflow: hidden;
+
+    background: #050505;
+
+    border-radius: 17px;
+
+    border:
+        1px solid rgba(0,255,255,.38);
+
+    box-shadow:
+        0 0 30px rgba(0,255,255,.05);
+}
+
+.video-banner video {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    padding: 15px;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.82),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+.banner-small {
+    width: fit-content;
+
+    padding: 4px 7px;
+
+    color: #00ffff;
+
+    background:
+        rgba(0,0,0,.65);
+
+    border:
+        1px solid rgba(0,255,255,.25);
+
+    border-radius: 5px;
+
+    font-size: 8px;
+    font-weight: 1000;
+}
+
+.banner-title {
+    margin-top: 5px;
+
+    font-size: 19px;
+
+    font-weight: 1000;
+}
+
+
+/* =========================================================
+   MUSIC PLAYER
+========================================================= */
+
+.music-player {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 12px;
+
+    padding: 10px 12px;
+
+    border-radius: 13px;
+
+    background: #080808;
+
+    border:
+        1px solid rgba(0,255,255,.17);
+}
+
+.music-icon {
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #000;
+
+    background: #00ffff;
+
+    font-weight: 1000;
+}
+
+.music-text {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.music-name {
+    font-size: 11px;
+
+    font-weight: 900;
+}
+
+.music-status {
+    margin-top: 3px;
+
+    color: #555;
+
+    font-size: 9px;
+}
+
+.music-button {
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    color: #00ffff;
+
+    background: #000;
+
+    border:
+        1px solid #222;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search {
+    margin-top: 15px;
+}
+
+.search input {
+    width: 100%;
+    height: 45px;
+
+    padding: 0 14px;
+
+    color: #ffffff;
+
+    background: #080808;
+
+    border:
+        1px solid #1e1e1e;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    font-size: 12px;
+}
+
+.search input:focus {
+    border-color: #00ffff;
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.section {
+    margin-top: 27px;
+}
+
+.section-head {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+}
+
+.section-title {
+    font-size: 16px;
+
+    font-weight: 1000;
+}
+
+.section-title::before {
+    content: "";
+
+    display: inline-block;
+
+    width: 4px;
+    height: 16px;
+
+    margin-right: 7px;
+
+    vertical-align: -2px;
+
+    border-radius: 5px;
+
+    background: #00ffff;
+}
+
+.section-label {
+    color: #444;
+
+    font-size: 9px;
+
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
+
+.products {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0,1fr));
+
+    gap: 10px;
+}
+
+.product {
+    min-height: 145px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 13px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0d0d0d,
+            #050505
+        );
+
+    border:
+        1px solid #1b1b1b;
+
+    transition: .2s;
+}
+
+.product:hover {
+    border-color:
+        rgba(0,255,255,.35);
+
+    transform:
+        translateY(-2px);
+}
+
+.product-badge {
+    width: fit-content;
+
+    padding: 4px 6px;
+
+    border-radius: 5px;
+
+    color: #00ffff;
+
+    background:
+        rgba(0,255,255,.06);
+
+    font-size: 7px;
+
+    font-weight: 1000;
+}
+
+.product-name {
+    margin-top: 13px;
+
+    font-size: 12px;
+
+    line-height: 1.35;
+
+    font-weight: 900;
+}
+
+.product-price {
+    margin-top: 5px;
+
+    color: #00ffff;
+
+    font-size: 14px;
+
+    font-weight: 1000;
+}
+
+.order-button {
+    width: 100%;
+    height: 35px;
+
+    margin-top: auto;
+
+    border-radius: 9px;
+
+    color: #00ffff;
+
+    background:
+        rgba(0,255,255,.05);
+
+    border:
+        1px solid rgba(0,255,255,.3);
+
+    font-size: 9px;
+
+    font-weight: 1000;
+
+    transition: .2s;
+}
+
+.order-button:active {
+    transform: scale(.97);
+}
+
+.order-button:hover {
+    color: #000;
+
+    background: #00ffff;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 999;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 18px;
+
+    background:
+        rgba(0,0,0,.84);
+
+    backdrop-filter: blur(8px);
+}
+
+.modal-card {
+    width: 100%;
+
+    max-width: 400px;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    background: #090909;
+
+    border:
+        1px solid rgba(0,255,255,.3);
+}
+
+.modal-title {
+    font-size: 19px;
+
+    font-weight: 1000;
+}
+
+.modal-description {
+    margin-top: 6px;
+
+    color: #666;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+.modal-product {
+    margin-top: 16px;
+
+    padding: 13px;
+
+    border-radius: 12px;
+
+    background: #000;
+
+    border:
+        1px solid #1b1b1b;
+}
+
+.modal-product-name {
+    font-size: 13px;
+
+    font-weight: 900;
+}
+
+.modal-product-price {
+    margin-top: 4px;
+
+    color: #00ffff;
+
+    font-size: 14px;
+
+    font-weight: 1000;
+}
+
+.target-input {
+    width: 100%;
+    height: 47px;
+
+    margin-top: 12px;
+
+    padding: 0 13px;
+
+    color: #fff;
+
+    background: #050505;
+
+    border:
+        1px solid #202020;
+
+    border-radius: 11px;
+
+    outline: none;
+}
+
+.target-input:focus {
+    border-color: #00ffff;
+}
+
+.modal-buttons {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 7px;
+
+    margin-top: 12px;
+}
+
+.modal-buttons button {
+    height: 43px;
+
+    border-radius: 10px;
+
+    font-size: 9px;
+
+    font-weight: 1000;
+}
+
+.close-button {
+    color: #aaa;
+
+    background: #111;
+
+    border:
+        1px solid #222;
+}
+
+.whatsapp-button {
+    color: #000;
+
+    background: #00ffff;
+
+    border: none;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    margin-top: 35px;
+
+    padding: 20px 0;
+
+    text-align: center;
+
+    color: #444;
+
+    font-size: 9px;
+}
+
+.footer strong {
+    color: #00ffff;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (min-width: 700px) {
+
+    .products {
+        grid-template-columns:
+            repeat(3, minmax(0,1fr));
+    }
+
+    .video-banner {
+        aspect-ratio: 16 / 6;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     BACKGROUND MUSIC
+========================================================= -->
+
+<audio
+    id="backgroundMusic"
+    loop
+    preload="auto"
+>
+    <source
+        src="music.mp3"
+        type="audio/mpeg"
+    >
+</audio>
+
+
+<!-- =========================================================
+     WELCOME PAGE
+========================================================= -->
+
+<section id="welcomePage">
+
+    <div class="container">
+
+        <div class="welcome-card">
+
+
+            <!-- WELCOME VIDEO -->
+
+            <div class="welcome-video">
+
+                <video
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                >
+
+                    <source
+                        src="banner1.mp4"
+                        type="video/mp4"
+                    >
+
+                </video>
+
+            </div>
+
+
+            <div class="welcome-label">
+                WELLCOME BUYER
+            </div>
+
+
+            <h1 class="welcome-title">
+                DAFTAR DULU YAH MAS/MBAK
+            </h1>
+
+
+            <p class="welcome-subtitle">
+                Masukkan data untuk melihat produk.
+            </p>
+
+
+            <!-- FORM -->
+
+            <form
+                id="registerForm"
+                class="form"
+            >
+
+                <div class="input-group">
+
+                    <input
+                        id="username"
+                        type="text"
+                        placeholder="Username Bebas"
+                        autocomplete="username"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <input
+                        id="number"
+                        type="text"
+                        placeholder="NO PW (CONTOH:888)"
+                        inputmode="numeric"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <input
+                        id="password"
+                        type="password"
+                        placeholder="Password Bebas"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    class="enter-button"
+                    type="submit"
+                >
+                    MASUK & UNTUK MELIHAT PRODUK KAMI
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     STORE PAGE
+========================================================= -->
+
+<section
+    id="storePage"
+    class="hidden"
+>
+
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <div class="logo">
+                Zamzzx <span>Stur</span>
+            </div>
+
+
+            <div class="tabs">
+
+                <button
+                    id="tabSuntik"
+                    class="tab active"
+                    type="button"
+                >
+                    BERANDA 1 SUNTIK
+                </button>
+
+
+                <button
+                    id="tabFF"
+                    class="tab"
+                    type="button"
+                >
+                    BERANDA 2 ID FF CANTIK
+                </button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- CONTENT -->
+
+    <main class="store-container">
+
+
+        <!-- =================================================
+             BERANDA 1
+        ================================================== -->
+
+        <div id="homeSuntik">
+
+
+            <!-- VIDEO BANNER -->
+
+            <div class="video-banner">
+
+                <video
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                >
+
+                    <source
+                        src="banner1.mp4"
+                        type="video/mp4"
+                    >
+
+                </video>
+
+
+                <div class="video-overlay">
+
+                    <div class="banner-small">
+                        BANNER 1 • SELAMAT DATANG
+                    </div>
+
+                    <div class="banner-title">
+                        Zamzzx Stur
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MUSIC -->
+
+            <div class="music-player">
+
+                <div class="music-icon">
+                    ♪
+                </div>
+
+
+                <div class="music-text">
+
+                    <div class="music-name">
+                        Zamzzx Stur Music
+                    </div>
+
+                    <div
+                        id="musicStatus"
+                        class="music-status"
+                    >
+                        Musik sedang diputar
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="musicButton"
+                    class="music-button"
+                    type="button"
+                >
+                    ❚❚
+                </button>
+
+            </div>
+
+
+
+            <!-- SEARCH -->
+
+            <div class="search">
+
+                <input
+                    id="searchMain"
+                    type="search"
+                    placeholder="Cari produk..."
+                >
+
+            </div>
+
+
+
+            <!-- VIP SALURAN -->
+
+            <section class="section">
+
+                <div class="section-head">
+
+                    <h2 class="section-title">
+                        VIP SALURAN
+                    </h2>
+
+                    <span class="section-label">
+                        FOLLOWERS
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="followersProducts"
+                    class="products"
+                ></div>
+
+            </section>
+
+
+
+            <!-- LIKE -->
+
+            <section class="section">
+
+                <div class="section-head">
+
+                    <h2 class="section-title">
+                        VIP LIKE TIKTOK
+                    </h2>
+
+                    <span class="section-label">
+                        LIKE
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="likeProducts"
+                    class="products"
+                ></div>
+
+            </section>
+
+
+
+            <!-- VIEW -->
+
+            <section class="section">
+
+                <div class="section-head">
+
+                    <h2 class="section-title">
+                        VIP VIEW
+                    </h2>
+
+                    <span class="section-label">
+                        VIEW
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="viewProducts"
+                    class="products"
+                ></div>
+
+            </section>
+
+        </div>
+
+
+
+        <!-- =================================================
+             BERANDA 2
+        ================================================== -->
+
+        <div
+            id="homeFF"
+            class="hidden"
+        >
+
+
+            <!-- VIDEO BANNER 2 -->
+
+            <div class="video-banner">
+
+                <video
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                >
+
+                    <source
+                        src="banner2.mp4"
+                        type="video/mp4"
+                    >
+
+                </video>
+
+
+                <div class="video-overlay">
+
+                    <div class="banner-small">
+                        BANNER 2 • ID STOK LAMA
+                    </div>
+
+                    <div class="banner-title">
+                        ID FF CANTIK
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SEARCH FF -->
+
+            <div class="search">
+
+                <input
+                    id="searchFF"
+                    type="search"
+                    placeholder="Cari ID FF..."
+                >
+
+            </div>
+
+
+
+            <!-- ID FF -->
+
+            <section class="section">
+
+                <div class="section-head">
+
+                    <h2 class="section-title">
+                        ID FF CANTIK
+                    </h2>
+
+                    <span class="section-label">
+                        STOCK
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="ffProducts"
+                    class="products"
+                ></div>
+
+            </section>
+
+        </div>
+
+
+
+        <!-- FOOTER -->
+
+        <footer class="footer">
+
+            <strong>Zamzzx Stur</strong>
+
+            <br>
+
+            Digital Store • All Rights Reserved
+
+        </footer>
+
+    </main>
+
+</section>
+
+
+
+<!-- =========================================================
+     ORDER MODAL
+========================================================= -->
+
+<div
+    id="orderModal"
+    class="modal hidden"
+>
+
+    <div class="modal-card">
+
+        <div class="modal-title">
+            Pesan Produk
+        </div>
+
+
+        <div class="modal-description">
+            Isi target sebelum melanjutkan
+            pemesanan melalui WhatsApp.
+        </div>
+
+
+        <div class="modal-product">
+
+            <div
+                id="modalName"
+                class="modal-product-name"
+            >
+                -
+            </div>
+
+
+            <div
+                id="modalPrice"
+                class="modal-product-price"
+            >
+                -
+            </div>
+
+        </div>
+
+
+        <input
+            id="targetInput"
+            class="target-input"
+            type="text"
+            placeholder="Username / Link / ID"
+        >
+
+
+        <div class="modal-buttons">
+
+            <button
+                id="closeModal"
+                class="close-button"
+                type="button"
+            >
+                BATAL
+            </button>
+
+
+            <button
+                id="whatsappOrder"
+                class="whatsapp-button"
+                type="button"
+            >
+                PESAN VIA WA
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+/* =========================================================
+   CONFIG
+========================================================= */
+
+const CONFIG = {
+
+    /*
+       GANTI NOMOR WHATSAPP ADMIN DI SINI.
+
+       Contoh:
+       628123456789
+
+       Jangan menggunakan:
+       +62
+       spasi
+       tanda -
+    */
+
+    whatsapp:
+        "6285809466295"
+
+};
+
+
+/* =========================================================
+   PRODUCT DATA
+========================================================= */
+
+const followersProducts = [
+
+    {
+        name: "100 PENGIKUT",
+        price: "Rp 500p"
+    },
+
+    {
+        name: "200 PENGIKUT",
+        price: "Rp 2K"
+    },
+
+    {
+        name: "300 PENGIKUT (BONUS 30)",
+        price: "Rp 3K"
+    },
+
+    {
+        name: "400 PENGIKUT",
+        price: "Rp 4K"
+    },
+
+    {
+        name: "600 PENGIKUT (BONUS 60)",
+        price: "Rp 6K"
+    },
+
+    {
+        name: "800 PENGIKUT",
+        price: "Rp 8K"
+    },
+
+    {
+        name: "1000 PENGIKUT (BONUS 100)",
+        price: "Rp 10K"
+    }
+
+];
+
+
+const likeProducts = [
+
+    {
+        name: "100 LIKE TIKTOK",
+        price: "Rp 1k"
+    },
+
+    {
+        name: "250 LIKE TIKTOK",
+        price: "Rp 2K"
+    },
+
+    {
+        name: "500 LIKE TIKTOK",
+        price: "Rp 4K"
+    },
+
+    {
+        name: "1000 LIKE TIKTOK",
+        price: "Rp 7K"
+    }
+
+];
+
+
+const viewProducts = [
+
+    {
+        name: "1000 VIEW",
+        price: "Rp 1k"
+    },
+
+    {
+        name: "5000 VIEW",
+        price: "Rp 4K"
+    },
+
+    {
+        name: "10000 VIEW",
+        price: "Rp 8K"
+    },
+
+    {
+        name: "50000 VIEW",
+        price: "Rp 38K"
+    }
+
+];
+
+
+const ffProducts = [
+
+    {
+        name: "ID:18242424837",
+        price: "Rp 500p"
+    },
+
+    {
+        name: "ID:18242424739",
+        price: "Rp 500p"
+    },
+
+    {
+        name: "ID:18242424599",
+        price: "Rp 500p"
+    },
+
+    {
+        name: "ID:18242424570",
+        price: "Rp 500p"
+    },
+
+    {
+        name: "ID:18242424529",
+        price: "Rp 500p"
+    },
+
+    {
+        name: "ID:18242424502",
+        price: "Rp 500p"
+    },
+
+    {
+        name: "ID:18242424460",
+        price: "Rp 500p"
+    },
+
+    {
+        name: "ID:18242424423",
+        price: "Rp 500p"
+    },
+
+    {
+        name: "ID:18242424387",
+        price: "Rp 500p"
+    },
+
+    {
+        name: "ID:18242424350",
+        price: "Rp 500p"
+    },
+
+    {
+        name: "ID:18148188808",
+        price: "Rp 2K"
+    },
+
+    {
+        name: "ID:18148818888",
+        price: "Rp 1.500K"
+    }
+
+];
+
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+const welcomePage =
+    document.getElementById(
+        "welcomePage"
+    );
+
+const storePage =
+    document.getElementById(
+        "storePage"
+    );
+
+const registerForm =
+    document.getElementById(
+        "registerForm"
+    );
+
+const music =
+    document.getElementById(
+        "backgroundMusic"
+    );
+
+const musicButton =
+    document.getElementById(
+        "musicButton"
+    );
+
+const musicStatus =
+    document.getElementById(
+        "musicStatus"
+    );
+
+const tabSuntik =
+    document.getElementById(
+        "tabSuntik"
+    );
+
+const tabFF =
+    document.getElementById(
+        "tabFF"
+    );
+
+const homeSuntik =
+    document.getElementById(
+        "homeSuntik"
+    );
+
+const homeFF =
+    document.getElementById(
+        "homeFF"
+    );
+
+const orderModal =
+    document.getElementById(
+        "orderModal"
+    );
+
+const modalName =
+    document.getElementById(
+        "modalName"
+    );
+
+const modalPrice =
+    document.getElementById(
+        "modalPrice"
+    );
+
+const targetInput =
+    document.getElementById(
+        "targetInput"
+    );
+
+let selectedProduct = null;
+
+
+/* =========================================================
+   ESCAPE HTML
+========================================================= */
+
+function escapeHTML(value) {
+
+    return String(value)
+
+        .replaceAll(
+            "&",
+            "&amp;"
+        )
+
+        .replaceAll(
+            "<",
+            "&lt;"
+        )
+
+        .replaceAll(
+            ">",
+            "&gt;"
+        )
+
+        .replaceAll(
+            '"',
+            "&quot;"
+        )
+
+        .replaceAll(
+            "'",
+            "&#039;"
+        );
+
+}
+
+
+/* =========================================================
+   RENDER PRODUCTS
+========================================================= */
+
+function renderProducts(
+    products,
+    elementId,
+    keyword = ""
+) {
+
+    const container =
+        document.getElementById(
+            elementId
+        );
+
+    if (!container) {
+        return;
+    }
+
+
+    const search =
+        keyword
+            .trim()
+            .toLowerCase();
+
+
+    const filtered =
+        products.filter(
+            product =>
+                product.name
+                    .toLowerCase()
+                    .includes(search)
+        );
+
+
+    if (
+        filtered.length === 0
+    ) {
+
+        container.innerHTML = `
+            <div style="
+                grid-column:1/-1;
+                text-align:center;
+                padding:25px 10px;
+                color:#555;
+                font-size:11px;
+            ">
+                Produk tidak ditemukan.
+            </div>
+        `;
+
+        return;
+
+    }
+
+
+    container.innerHTML =
+        filtered
+            .map(
+                product => `
+
+                    <article
+                        class="product"
+                    >
+
+                        <div
+                            class="product-badge"
+                        >
+                            TERSEDIA
+                        </div>
+
+
+                        <div
+                            class="product-name"
+                        >
+                            ${escapeHTML(
+                                product.name
+                            )}
+                        </div>
+
+
+                        <div
+                            class="product-price"
+                        >
+                            ${escapeHTML(
+                                product.price
+                            )}
+                        </div>
+
+
+                        <button
+                            class="order-button"
+                            type="button"
+
+                            data-name="${escapeHTML(
+                                product.name
+                            )}"
+
+                            data-price="${escapeHTML(
+                                product.price
+                            )}"
+                        >
+                            ORDER
+                        </button>
+
+                    </article>
+
+                `
+            )
+            .join("");
+
+
+    container
+        .querySelectorAll(
+            ".order-button"
+        )
+        .forEach(
+            button => {
+
+                button.addEventListener(
+                    "click",
+                    function() {
+
+                        openOrder(
+                            this.dataset.name,
+                            this.dataset.price
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+}
+
+
+/* =========================================================
+   INITIAL PRODUCTS
+========================================================= */
+
+renderProducts(
+    followersProducts,
+    "followersProducts"
+);
+
+renderProducts(
+    likeProducts,
+    "likeProducts"
+);
+
+renderProducts(
+    viewProducts,
+    "viewProducts"
+);
+
+renderProducts(
+    ffProducts,
+    "ffProducts"
+);
+
+
+/* =========================================================
+   ENTER STORE
+========================================================= */
+
+registerForm.addEventListener(
+    "submit",
+    async function(event) {
+
+        event.preventDefault();
+
+
+        const username =
+            document
+                .getElementById(
+                    "username"
+                )
+                .value
+                .trim();
+
+
+        const number =
+            document
+                .getElementById(
+                    "number"
+                )
+                .value
+                .trim();
+
+
+        const password =
+            document
+                .getElementById(
+                    "password"
+                )
+                .value
+                .trim();
+
+
+        if (
+            !username ||
+            !number ||
+            !password
+        ) {
+
+            alert(
+                "Silakan isi semua data."
+            );
+
+            return;
+
+        }
+
+
+        /*
+           Simpan informasi UI saja.
+
+           Password sengaja tidak disimpan
+           di localStorage.
+        */
+
+        localStorage.setItem(
+            "zamzzx_username",
+            username
+        );
+
+        localStorage.setItem(
+            "zamzzx_number",
+            number
+        );
+
+
+        /*
+           Tombol submit merupakan user interaction.
+
+           Karena itu browser umumnya mengizinkan
+           music.play() pada titik ini.
+        */
+
+        try {
+
+            music.volume = 0.45;
+
+            await music.play();
+
+            musicStatus.textContent =
+                "Musik sedang diputar";
+
+            musicButton.textContent =
+                "❚❚";
+
+        } catch (error) {
+
+            musicStatus.textContent =
+                "Tekan tombol musik untuk memutar";
+
+            musicButton.textContent =
+                "▶";
+
+        }
+
+
+        welcomePage.classList.add(
+            "hidden"
+        );
+
+        storePage.classList.remove(
+            "hidden"
+        );
+
+
+        window.scrollTo(
+            0,
+            0
+        );
+
+    }
+);
+
+
+/* =========================================================
+   MUSIC CONTROL
+========================================================= */
+
+musicButton.addEventListener(
+    "click",
+    async function() {
+
+        if (music.paused) {
+
+            try {
+
+                await music.play();
+
+                musicStatus.textContent =
+                    "Musik sedang diputar";
+
+                musicButton.textContent =
+                    "❚❚";
+
+            } catch (error) {
+
+                musicStatus.textContent =
+                    "Musik gagal diputar";
+
+            }
+
+        } else {
+
+            music.pause();
+
+            musicStatus.textContent =
+                "Musik dijeda";
+
+            musicButton.textContent =
+                "▶";
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   TAB SUNTIK
+========================================================= */
+
+tabSuntik.addEventListener(
+    "click",
+    function() {
+
+        tabSuntik.classList.add(
+            "active"
+        );
+
+        tabFF.classList.remove(
+            "active"
+        );
+
+
+        homeSuntik.classList.remove(
+            "hidden"
+        );
+
+        homeFF.classList.add(
+            "hidden"
+        );
+
+
+        window.scrollTo(
+            0,
+            0
+        );
+
+    }
+);
+
+
+/* =========================================================
+   TAB FF
+========================================================= */
+
+tabFF.addEventListener(
+    "click",
+    function() {
+
+        tabFF.classList.add(
+            "active"
+        );
+
+        tabSuntik.classList.remove(
+            "active"
+        );
+
+
+        homeFF.classList.remove(
+            "hidden"
+        );
+
+        homeSuntik.classList.add(
+            "hidden"
+        );
+
+
+        window.scrollTo(
+            0,
+            0
+        );
+
+    }
+);
+
+
+/* =========================================================
+   SEARCH MAIN
+========================================================= */
+
+document
+    .getElementById(
+        "searchMain"
+    )
+    .addEventListener(
+        "input",
+        function() {
+
+            renderProducts(
+                followersProducts,
+                "followersProducts",
+                this.value
+            );
+
+            renderProducts(
+                likeProducts,
+                "likeProducts",
+                this.value
+            );
+
+            renderProducts(
+                viewProducts,
+                "viewProducts",
+                this.value
+            );
+
+        }
+    );
+
+
+/* =========================================================
+   SEARCH FF
+========================================================= */
+
+document
+    .getElementById(
+        "searchFF"
+    )
+    .addEventListener(
+        "input",
+        function() {
+
+            renderProducts(
+                ffProducts,
+                "ffProducts",
+                this.value
+            );
+
+        }
+    );
+
+
+/* =========================================================
+   OPEN ORDER
+========================================================= */
+
+function openOrder(
+    name,
+    price
+) {
+
+    selectedProduct = {
+        name,
+        price
+    };
+
+
+    modalName.textContent =
+        name;
+
+    modalPrice.textContent =
+        price;
+
+    targetInput.value =
+        "";
+
+
+    orderModal.classList.remove(
+        "hidden"
+    );
+
+
+    setTimeout(
+        () => targetInput.focus(),
+        100
+    );
+
+}
+
+
+/* =========================================================
+   CLOSE ORDER
+========================================================= */
+
+function closeOrder() {
+
+    orderModal.classList.add(
+        "hidden"
+    );
+
+    selectedProduct =
+        null;
+
+}
+
+
+document
+    .getElementById(
+        "closeModal"
+    )
+    .addEventListener(
+        "click",
+        closeOrder
+    );
+
+
+orderModal.addEventListener(
+    "click",
+    function(event) {
+
+        if (
+            event.target ===
+            orderModal
+        ) {
+
+            closeOrder();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   WHATSAPP ORDER
+========================================================= */
+
+document
+    .getElementById(
+        "whatsappOrder"
+    )
+    .addEventListener(
+        "click",
+        function() {
+
+            if (!selectedProduct) {
+                return;
+            }
+
+
+            const target =
+                targetInput.value.trim();
+
+
+            if (!target) {
+
+                alert(
+                    "Masukkan username, link, atau ID."
+                );
+
+                targetInput.focus();
+
+                return;
+
+            }
+
+
+            const username =
+                localStorage.getItem(
+                    "zamzzx_username"
+                ) || "-";
+
+
+            const message =
+                [
+                    "Halo Admin Zamzzx Stur.",
+                    "",
+                    "Saya ingin order:",
+                    `Produk: ${selectedProduct.name}`,
+                    `Harga: ${selectedProduct.price}`,
+                    `Target: ${target}`,
+                    `Username: ${username}`
+                ].join("\n");
+
+
+            const whatsappURL =
+                "https://wa.me/" +
+                CONFIG.whatsapp +
+                "?text=" +
+                encodeURIComponent(
+                    message
+                );
+
+
+            window.open(
+                whatsappURL,
+                "_blank",
+                "noopener,noreferrer"
+            );
+
+
+            closeOrder();
+
+        }
+    );
+
+
+/* =========================================================
+   ESCAPE MODAL WITH ESC
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (
+            event.key === "Escape" &&
+            !orderModal.classList.contains(
+                "hidden"
+            )
+        ) {
+
+            closeOrder();
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+</html>
